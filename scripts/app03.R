@@ -31,3 +31,11 @@ plotData = ggplot( data=weatherData ) +
               linetype=3, 
               fill="goldenrod2");
 plot(plotData)
+ggsave("app3.plot2.png", device="png",path="./images", plot=plotData, width=6, 
+       height=8, units="cm", dpi=400)
+         
+         
+         
+         
+         
+         
