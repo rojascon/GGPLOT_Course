@@ -20,8 +20,7 @@ plotData = ggplot( data=weatherData ) +
        subtitle = "Lansing, Michigan: 2016",
        x = "Temperature (F)",
        y = "Wind Speed (mph)")+
-  scale_y_continuous(breaks=c(5,10,15,20))+
-  ylim(0,20)+
+  scale_y_continuous(limits=c(0,20), breaks=seq(from=5,to=20,by=5))+
   scale_x_continuous(breaks=c(-1,2,5,8,11,14,17,20,23,26,29))+
   theme(axis.title.x=element_text(size=14, color="#d94801",
                                   face="italic", hjust=0.2),
