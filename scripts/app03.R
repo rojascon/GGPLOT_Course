@@ -31,8 +31,8 @@ plotData = ggplot( data=weatherData ) +
               linetype=3, 
               fill="goldenrod2");
 plot(plotData)
-ggsave(filename="app3.plot2.png", 
-       device="png",path="./images",
+ggsave(filename="images/app3_plot2.png", 
+       device="png",
        plot=plotData, 
        width=6, 
        height=8, 
