@@ -19,8 +19,9 @@ plotData = ggplot( data=weatherData ) +
   labs(title = "Wind Speed vs. Temperature Difference",
        subtitle = "Lansing, Michigan: 2016",
        x = "Temperature (F)",
-       y = "Wind Speed (mph)")+
-  scale_y_continuous(limits=c(0,20), breaks=seq(from=5,to=20,by=5))+
+       y = "Wind Speed \n
+       (mph)")+
+  scale_y_continuous(limits=c(0,20), breaks=seq(from=5,to=20,by=5), expand = c(0, 0))+
   scale_x_continuous(breaks=c(-1,2,5,8,11,14,17,20,23,26,29))+
   theme(axis.title.x=element_text(size=14, color="#d94801",
                                   face="italic", hjust=0.2),
@@ -35,7 +36,8 @@ plotData = ggplot( data=weatherData ) +
                                    face="bold.italic", 
                                    color ="#b10026", 
                                    family="sans",
-                                   hjust=0.7))+
+                                   hjust=0.7),
+        plot.margin=margin(0, 0, 0, 0, "cm"))+
   geom_smooth(mapping=aes(x=abs(tempDept), y=windSpeed),
               method="lm",
               color="purple", 
