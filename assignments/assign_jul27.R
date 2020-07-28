@@ -138,6 +138,6 @@ for(m in 1:length(pattern))
       months[m] = months[m] + weatherData$precip3[i];
     }
   }
-})
+}
 }
 
